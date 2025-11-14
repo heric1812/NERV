@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { HelperText, IconButton, TextInput } from "react-native-paper";
 import { Controller } from "react-hook-form";
-import { useFocusEffect } from "@react-navigation/native";
 import { useSearchPilot } from "../common/hooks/useSearchPilot";
 import { OperatorCard } from "../common/components/OperatorCard";
 import { fetchOperators } from "../common/services/apiService";
@@ -31,12 +30,9 @@ const TerminalScreen: FC<Props> = ({ navigation }) => {
   const [operators, setOperators] = useState<any[]>([]);
 
   useEffect(() => {
+    setValue("pilot", "");
     setOperators(fetchOperators());
   }, []);
-
-  useFocusEffect(() => {
-    setValue("pilot", "");
-  });
 
   return (
     <KeyboardAvoidingView
