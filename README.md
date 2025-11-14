@@ -1,3 +1,5 @@
+![Demostración de la app](./assets/readme/demo.gif)
+
 # NERV — Instrucciones de instalación y despliegue
 
 Este repositorio contiene una aplicación React Native desarrollada con Expo. Este README reúne pasos detallados para instalar, ejecutar en desarrollo.
